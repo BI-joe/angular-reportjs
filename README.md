@@ -15,9 +15,9 @@ Setup
 
 ```html
 <!--
-Include Angular ~1.2.21
-Include Chart.js >= v1.0.1-beta.3
-Include Report.js >= v1.0.1-beta.3
+Include Angular ~1.3.0
+Include Chart.js ~1.0.1
+Include Report.js ~1.0.0
 -->
 <script type="text/javascript" src="bower_components/angular-reportjs/src/angular-reportjs.js"></script>
 ```
