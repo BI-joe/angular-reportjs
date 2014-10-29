@@ -1,0 +1,22 @@
+{
+  "name": "report.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/youknowriad/report.js",
+  "authors": [
+    "Riad Benguella <riad@rizeway.com>"
+  ],
+  "main": "dist/reportjs.js",
+  "description": "Report Library",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "test",
+    "karma.conf.js",
+    "package.json",
+    "Gruntfile.js"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "chartjs": "~1.0.1"
+  }
+}

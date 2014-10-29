@@ -1,0 +1,18 @@
+{
+  "name": "angular-reportjs",
+  "version": "1.0.0",
+  "authors": [
+    "Riad Benguella <riad@rizeway.com>"
+  ],
+  "description": "Angular Directive for Report.js",
+  "main": "src/angular-reportjs.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "demo"
+  ],
+  "dependencies": {
+    "report.js": "~1.0.0",
+    "angular": "~1.3.0"
+  }
+}

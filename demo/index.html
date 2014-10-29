@@ -1,0 +1,43 @@
+<html ng-app="reportjs-demo">
+    <head>
+        <title>Angular Report.js example</title>
+        <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="../bower_components/chartjs/Chart.min.js"></script>
+        <script type="text/javascript" src="../bower_components/report.js/dist/reportjs.js"></script>
+        <script type="text/javascript" src="../src/angular-reportjs.js"></script>
+
+        <script>
+            angular.module('reportjs-demo', ['reportjs']);
+            angular.module('reportjs-demo').controller('MainController', function($scope, $timeout) {
+                $scope.data = {
+                    dimensions: [{ id: 'Year' }, { id: 'Month' }],
+                    dimensionValues: [
+                        [{ id: '2013' }, { id: '2014' }],
+                        [{ id: 'January' }, { id: 'February' }, { id: 'March' }]
+                    ],
+                    cells: [
+                        {value: 2, dimensionValues: [0, 0]},
+                        {value: 3, dimensionValues: [0, 1]},
+                        {value: 9, dimensionValues: [0, 2]},
+                        {value: 10, dimensionValues: [1, 0]},
+                        {value: 90, dimensionValues: [1, 1]},
+                        {value: 11, dimensionValues: [1, 2]}
+                    ]
+                };
+
+                $scope.layout = {
+                    type: 'segmentGraph',
+                    graphType: 'doughnut'
+                };
+
+                $timeout(function() {
+                    $scope.layout.graphType = 'polarArea';
+                }, 5000);
+            });
+        </script>
+    </head>
+    <body ng-controller="MainController">
+        <report-js style="display: block; width: 100%;" report-data="data" layout="layout"></report-js>
+    </body>
+</html>
