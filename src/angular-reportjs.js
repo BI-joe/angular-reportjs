@@ -18,13 +18,9 @@ angular.module('reportjs').directive('reportJs', function() {
                 }
             }
 
-            scope.$watch(attrs.reportData, function(value) {
-                data = value;
-                render(data, layout);
-            }, true);
-
-            scope.$watch(attrs.layout, function(value) {
-                layout = value;
+            scope.$watchGroup([attrs.reportData, attrs.layout], function(values) {
+                data = values[0];
+                layout = values[1];
                 render(data, layout);
             }, true);
         }
