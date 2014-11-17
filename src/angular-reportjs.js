@@ -23,6 +23,10 @@ angular.module('reportjs').directive('reportJs', function() {
                 layout = values[1];
                 render(data, layout);
             }, true);
+
+            $(element).parent().resize(function() {
+              render(data, layout);
+            });
         }
     };
 
